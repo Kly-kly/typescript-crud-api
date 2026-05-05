@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: Node MySQL API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000
+paths:
+  /accounts/register:
+    post:
+      summary: Register a new user account
+  /accounts/authenticate:
+    post:
+      summary: Authenticate user and get JWT token
+  /accounts/refresh-token:
+    post:
+      summary: Refresh token
+  /accounts/revoke-token:
+    post:
+      summary: Revoke token
+  /accounts/verify-email:
+    post:
+      summary: Verify email
+  /accounts/forgot-password:
+    post:
+      summary: Forgot password
+  /accounts/validate-reset-token:
+    post:
+      summary: Validate reset token
+  /accounts/reset-password:
+    post:
+      summary: Reset password
+  /accounts:
+    get:
+      summary: Get all accounts
+    post:
+      summary: Create account
+  /accounts/{id}:
+    get:
+      summary: Get account by id
+    put:
+      summary: Update account
+    delete:
+      summary: Delete account
